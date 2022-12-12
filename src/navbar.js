@@ -8,9 +8,9 @@ function Yläpalkki() {
     <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">Valuuttamuunnin</Navbar.Brand>
-          <Nav className="me-auto ">
+          <Nav className="my-2 my-sm-0 ">
             
-            <Nav.Link href="#About">About</Nav.Link>
+            <Nav.Link href="#About ">About</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
