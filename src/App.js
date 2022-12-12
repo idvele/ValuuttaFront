@@ -18,7 +18,7 @@ function App() {
       <div class="row">
      <Palkki/>
      
-     <div class= "col-sm-7 center">
+     <div class= "col-sm-7">
       <div className="left">
       <Entrybox/>
       <div class="rates">
