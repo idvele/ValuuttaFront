@@ -59,3 +59,11 @@ code {
 #LeftItem{
   padding: 20px;
 }
+
+.CurrencyAmount{
+  width: 100px;
+}
+
+.newInputs{
+  padding: 10px;
+}
