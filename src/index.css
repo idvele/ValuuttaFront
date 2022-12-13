@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ height: 100%;
+  width: 100%;
 }
 
 code {
@@ -19,3 +21,41 @@ code {
   display: flex;
 }
 
+.left{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  
+
+  
+}
+
+.rates{
+  
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  /* position: absolute; */
+
+    display: flex; /*for text*/
+
+    align-items: center; /*for text*/
+
+    justify-content: center; /*for text*/
+
+
+}
+.AnswerBox{
+  display: flex;
+  border-style: dashed;
+  height: 90vh;
+  align-items: center;
+  text-align: center;
+  
+}
+
+#LeftItem{
+  padding: 20px;
+}

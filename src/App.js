@@ -15,23 +15,34 @@ function App() {
  
   return (
     <div className="App">
-      <div class="row">
-     <Palkki/>
+        <Palkki/>
+      <div className="row">
      
-     <div class= "col-sm-7">
-      <div className="left">
-      <Entrybox/>
-      <div class="rates">
-     <Ratebutton/>
-     </div>
-     <Newrate/>
-     </div>
-    </div>
+          <div className= "col-sm-7 left" >
+        
+            <div id ="LeftItem">
+              <Entrybox />
+            <div/>
 
-     <div class= "col-sm-5">
-     <Answer/>
+            <div id="LeftItem">
+              <div className="rates">
+                <Ratebutton />
+              </div>
+            </div>
+
+           </div>
+
+            <div id= "LeftItem">
+              <Newrate />
+            </div>
+          </div>
+                
+
+        <div className= "col-sm-5">
+          <Answer/>
+        </div>
      </div>
-     </div>
+      
     </div>
   );
 }
