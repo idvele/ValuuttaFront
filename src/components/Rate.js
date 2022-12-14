@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 
 function Rate(props) {
 return(

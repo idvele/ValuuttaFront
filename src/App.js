@@ -1,12 +1,13 @@
 import { useState } from "react";
 import React from "react";
-import Rate from "./Rate";
-import Palkki from"./navbar";
-import Entrybox from "./entrybox";
-import Ratebutton from "./ratebutton";
-import Newrate from "./newrate";
-import Answer from "./answer";
+import Rate from "./components/Rate";
+import Palkki from"./components/navbar";
+import Entrybox from "./components/entrybox";
+import Ratebutton from "./components/ratebutton";
+import Newrate from "./components/newrate";
+import Answer from "./components/answer";
 import Card from 'react-bootstrap/Card';
+import fetchData from "./Methods/fetchdata";
 
 
 
@@ -23,16 +24,26 @@ function App() {
 
   //lasketaan tulos
   function result(rate, amount){
-  console.log(rate);
-  console.log(amount);
-  NewOutcome(rate*amount)
-}
+    console.log(rate);
+    console.log(amount);
+    NewOutcome(rate*amount)
+  }
 
   //Valuuttamäärän vaihto
   function HandleAmountChange(event){
     NewAmount(event.target.value)
-    console.log(event.target.value);
+    // console.log(event.target.value);
   }
+
+  //kurssihaku Apista
+
+ 
+
+    function rateWrapper(rate, amount){
+      console.log(fetchData())
+      NewRate(2)
+      result(rate,amount)
+    }
  
   return (
     <div className="App">
@@ -46,7 +57,7 @@ function App() {
             <div/>
 
             <div id="LeftItem">
-              <div className="rates" onClick={()=>result(rate,amount) }>
+              <div className="rates" onClick={()=>rateWrapper(rate,amount)}>
                 <Ratebutton />
               </div>
             </div>
