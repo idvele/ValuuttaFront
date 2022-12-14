@@ -12,6 +12,27 @@ import Card from 'react-bootstrap/Card';
 
 function App() {
   
+  //Valuuttavalinnan muuttuja
+  const[currency, NewCurrency]=useState("empty")
+  //kurssi
+  const[rate, NewRate]= useState(1)
+  //valuuttamäärä
+  const[amount, NewAmount]=useState(0)
+  //tulos
+  const[outcome, NewOutcome]= useState("...")
+
+  //lasketaan tulos
+  function result(rate, amount){
+  console.log(rate);
+  console.log(amount);
+  NewOutcome(rate*amount)
+}
+
+  //Valuuttamäärän vaihto
+  function HandleAmountChange(event){
+    NewAmount(event.target.value)
+    console.log(event.target.value);
+  }
  
   return (
     <div className="App">
@@ -21,11 +42,11 @@ function App() {
           <div className= "col-sm-7 left" >
         
             <div id ="LeftItem">
-              <Entrybox />
+              <Entrybox onChange={HandleAmountChange}/>
             <div/>
 
             <div id="LeftItem">
-              <div className="rates">
+              <div className="rates" onClick={()=>result(rate,amount) }>
                 <Ratebutton />
               </div>
             </div>
@@ -39,7 +60,8 @@ function App() {
                 
 
         <div className= "col-sm-5">
-          <Answer/>
+          <Answer
+          outcome={outcome}/>
         </div>
      </div>
       

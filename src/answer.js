@@ -1,8 +1,8 @@
 
-function answer(){
+function answer(props){
     return (
         <div className="AnswerBox">
-          <h2>liirumlaarum tähän vastaus</h2>
+          <h2>{props.outcome}</h2>
           </div>
         // <div class="card">
         // <div class="card-body">
