@@ -21,7 +21,10 @@ import { useState } from "react";
                 setLoading(false);
               });   
             };
-               
+            //Miten laitan jokaiseen button oman onclickin joka määrittää rateksi kyseisen kurssin?
+               function Rate(){
+                props.NewRate(target)
+               }
     
        if (isLoading){
         return(
@@ -31,8 +34,9 @@ import { useState } from "react";
        return(
         <div>
             {rates.map(rates=>
-             <button type="button" className="btn btn-info" onClick={props.onClick}>{rates.currency}</button>
-                )}
+             <button type="button" className="btn btn-info" onClick={Rate}>{rates.currency}</button>
+                ) 
+                }
             </div>
        );
     

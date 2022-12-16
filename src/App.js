@@ -17,6 +17,7 @@ function App() {
   const[currency, NewCurrency]=useState("empty")
   //kurssi
   const[rate, NewRate]= useState(1)
+  const [allRates, SetAllRates]= useState({})
   //valuuttamäärä
   const[amount, NewAmount]=useState(0)
   //tulos
@@ -37,6 +38,16 @@ function App() {
 
   //kurssihaku Apista
 
+  // useEffect(()=>{
+  //   getRateButtons();
+  //  })
+  //        function getRateButtons(){
+  //         const url = 'https://localhost:7207/Valuutta';
+  //         axios.get(url).then((response)=>{
+  //           SetAllRates(response.data);
+            
+  //         });   
+  //       };
  
 
     function rateWrapper(rate, amount){
@@ -57,8 +68,8 @@ function App() {
             <div/>
 
             <div id="LeftItem">
-              <div className="rates" onClick={()=>rateWrapper(rate,amount)}>
-                <Ratebutton />
+              <div className="rates">
+                <Ratebutton NewRate={NewRate} />
               </div>
             </div>
 
