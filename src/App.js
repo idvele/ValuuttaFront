@@ -36,6 +36,11 @@ function App() {
     // console.log(event.target.value);
   }
 
+  function passer(props){
+    console.log("passaus toimii");
+    Newrate(props)
+  }
+
   //kurssihaku Apista
 
   // useEffect(()=>{
@@ -69,7 +74,7 @@ function App() {
 
             <div id="LeftItem">
               <div className="rates">
-                <Ratebutton NewRate={NewRate} />
+                <Ratebutton NewRate={passer} />
               </div>
             </div>
 
