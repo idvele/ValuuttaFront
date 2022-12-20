@@ -34,7 +34,7 @@ import { useState } from "react";
        return(
         <div>
             {rates.map(rates=>
-             <button type="button" className="btn btn-info" onClick={props.NewRate(2)}>{rates.currency}</button>
+             <button type="button" className="btn btn-info" onClick={console.log("testi")}>{rates.currency}</button>
                 ) 
                 }
             </div>
